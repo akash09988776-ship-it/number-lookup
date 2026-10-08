@@ -1,0 +1,14 @@
+.env
+*.env
+
+users.json
+verified.json
+queries.json
+approved_groups.json
+
+__pycache__/
+*.pyc
+*.pyo
+
+.venv/
+venv/
