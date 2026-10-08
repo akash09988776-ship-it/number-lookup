@@ -493,17 +493,15 @@ def make_safe_record(record):
 def format_single_record(record, index):
 
     return (
-        f"╭──────── RECORD {index} ────────╮\n"
-        f"│\n"
-        f"│ 🪪 𝗔𝗮𝗱𝗵𝗮𝗿 • {record['aadhar']}\n"
-        f"│ 📞 𝗠𝗼𝗯𝗶𝗹𝗲 • {record['mobile']}\n"
-        f"│ 👤 𝗡𝗮𝗺𝗲 • {record['name']}\n"
-        f"│ 👨‍👦 𝗙𝗮𝘁𝗵𝗲𝗿 • {record['father']}\n"
-        f"│ 📍 𝗔𝗱𝗱𝗿𝗲𝘀𝘀 • {record['address']}\n"
-        f"│ 📱 𝗔𝗹𝘁 𝗠𝗼𝗯𝗶𝗹𝗲 • {record['alt_mobile']}\n"
-        f"│ 📡 𝗖𝗶𝗿𝗰𝗹𝗲 • {record['circle']}\n"
-        f"│\n"
-        f"╰──────────────────────────╯"
+        f"👤 ʀᴇᴄᴏʀᴅ {index}\n"
+        f"├🪪 ᴀᴀᴅʜᴀᴀʀ: {record['aadhar']}\n"
+        f"├📱 ᴍᴏʙɪʟᴇ: {record['mobile']}\n"
+        f"├👤 ɴᴀᴍᴇ: {record['name']}\n"
+        f"├👨 ꜰᴀᴛʜᴇʀ: {record['father']}\n"
+        f"├🏠 ᴀᴅᴅʀᴇꜱꜱ: {record['address']}\n"
+        f"├📲 ᴀʟᴛ ᴍᴏʙɪʟᴇ: {record['alt_mobile']}\n"
+        f"└📡 ᴄɪʀᴄʟᴇ: {record['circle']}\n"
+        "━━━━━━━━━━━━━━━━━━\n"
     )
 
 
