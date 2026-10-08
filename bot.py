@@ -212,9 +212,11 @@ def main_keyboard(user_id):
         is_persistent=True,
     )
 
+
 # ============================================================
 # CONTACT VERIFICATION KEYBOARD
 # ============================================================
+
 
 def contact_keyboard():
     keyboard = [
@@ -232,7 +234,6 @@ def contact_keyboard():
         resize_keyboard=True,
         one_time_keyboard=True,
     )
-
 
 # ============================================================
 # START
@@ -475,7 +476,7 @@ def make_safe_record(record):
     circle = str(circle).replace("&amp;", "&")
 
     return {
-        # Aadhaar, Mobile, Alt Mobile full show honge
+        # Sab fields full show honge (no mask)
         "aadhar": str(aadhar) if aadhar else "N/A",
         "mobile": str(mobile) if mobile else "N/A",
         "name": str(name) if name else "N/A",
@@ -487,7 +488,7 @@ def make_safe_record(record):
 
 
 # ============================================================
-# FORMAT ONE RECORD
+# FORMAT ONE RECORD (NO BOX - SIMPLE TREE)
 # ============================================================
 
 def format_single_record(record, index):
@@ -535,7 +536,7 @@ def build_page(records, number, page):
         f"📊 𝗧𝗼𝘁𝗮𝗹 𝗥𝗲𝗰𝗼𝗿𝗱𝘀 • {total}",
         f"📄 𝗣𝗮𝗴𝗲 • {page + 1}/{total_pages}",
         "🔎 𝗦𝘁𝗮𝘁𝘂𝘀 • Success",
-        "",
+        "━━━━━━━━━━━━━━━━━━",
     ]
 
     for position, record in enumerate(
@@ -548,8 +549,6 @@ def build_page(records, number, page):
                 position,
             )
         )
-
-        lines.append("")
 
     lines.append(
         "├ 🛠️ ᴅᴇᴠᴇʟᴏᴘᴇʀ: ᴅᴇᴇᴘᴀᴋ • 🛰️"
