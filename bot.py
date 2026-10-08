@@ -179,18 +179,30 @@ def is_verified(user_id):
 def main_keyboard(user_id):
     rows = [
         [
-            KeyboardButton("🔎 Number Lookup"),
-            KeyboardButton("👤 My Contact"),
+            KeyboardButton(
+                "🔎 Number Lookup",
+                style="success",
+            ),
+            KeyboardButton(
+                "👤 My Contact",
+                style="primary",
+            ),
         ],
         [
-            KeyboardButton("❓ Help"),
+            KeyboardButton(
+                "❓ Help",
+                style="primary",
+            ),
         ],
     ]
 
     if user_id == ADMIN_ID:
         rows.append(
             [
-                KeyboardButton("⚙️ Bot Management"),
+                KeyboardButton(
+                    "⚙️ Bot Management",
+                    style="danger",
+                )
             ]
         )
 
@@ -199,7 +211,6 @@ def main_keyboard(user_id):
         resize_keyboard=True,
         is_persistent=True,
     )
-
 
 # ============================================================
 # CONTACT VERIFICATION KEYBOARD
@@ -211,6 +222,7 @@ def contact_keyboard():
             KeyboardButton(
                 "📱 Share My Contact",
                 request_contact=True,
+                style="success",
             )
         ]
     ]
@@ -307,7 +319,7 @@ async def show_help(update: Update):
         "𝑵𝒆𝒆𝒅 𝒂𝒔𝒔𝒊𝒔𝒕𝒂𝒏𝒄𝒆?\n\n"
         "𝑭𝒐𝒓 𝒔𝒖𝒑𝒑𝒐𝒓𝒕, 𝒊𝒔𝒔𝒖𝒆𝒔 𝒐𝒓 𝒈𝒆𝒏𝒆𝒓𝒂𝒍 "
         "𝒊𝒏𝒒𝒖𝒊𝒓𝒊𝒆𝒔, 𝒑𝒍𝒆𝒂𝒔𝒆 𝒄𝒐𝒏𝒕𝒂𝒄𝒕 𝒕𝒉𝒆 𝒂𝒅𝒎𝒊𝒏.\n\n"
-        "👨‍💻 𝑨𝒅𝒎𝒊𝒏 ~ @AK4SX"
+        "👨‍💻 𝑨𝒅𝒎𝒊𝒏 ~ @Fojishsb"
     )
 
 
