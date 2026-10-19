@@ -40,7 +40,7 @@ if not BOT_TOKEN:
 
 ADMIN_ID = 8333711029
 
-API_URL = "https://akash-number-lookup.vercel.app/api/search"
+API_URL = "https://akash-number-lookup.vercel.app/v4/lookup-x9k2"
 API_KEY = "DEMO"
 
 RECORDS_PER_PAGE = 3
